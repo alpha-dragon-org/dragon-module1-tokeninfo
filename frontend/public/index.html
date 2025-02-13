@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dragon Token Info</title>
+    <!-- Local libraries -->
+    <script src="lib/chart.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" />
+
+    <!-- Combined CSS -->
+    <style>
+      /* ------------------------------
+         GLOBAL & BASIC STYLES
+      --------------------------------*/
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e1e;
+        color: #ccc;
+        font-family: "Inter", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ------------------------------
+         HEADER SECTION
+      --------------------------------*/
+      .main-header {
+        position: relative;
+        padding: 7.5% 15% 2rem;
+        text-align: left;
+        background: #1e1e1e;
+        border-bottom: 1px solid #1e1e1e;
+      }
+      .main-header .dragon-image {
+        position: absolute;
+        top: 2%;
+        right: 15%;
+        width: 30%;
+        height: auto;
+      }
+      .project-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .module-title {
+        font-size: 0.9rem;
+        color: #ffffff;
+      }
+      .bounty-text {
+        font-size: 0.9rem;
+        color: #ffdb66;
+      }
+      .instructions {
+        max-width: 650px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+                color: #ffffff;
+
+      }
+
+      /* ------------------------------
+         MAIN LAYOUT
+      --------------------------------*/
+      .layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2% 15.5%;
+      }
+
+      /* ------------------------------
+         LEFT COLUMN: Data Field Section
+      --------------------------------*/
+      .data-field-section {
+        flex: 1 1 300px;
+        background-color: #1e1e1e;
+        border-radius: 8px;
+        padding: rem;
+        min-width: 280px;
+      }
+      .data-field-section h2 {
+        margin-top: 0;
+        font-size: 1rem;
+        color: #ffffff;
+      }
+      .data-field-section table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      .data-field-section td {
+        padding: 0 0;
+        vertical-align: middle;
+        color: #ffffff;
+
+      }
+      .data-field-section td strong {
+        display: inline-block;
+        min-width: 110px;
+        color: #ffffff;
+      }
+      .data-field-section img {
+        vertical-align: middle;
+        border-radius: 4px;
+      }
+
+      /* ------------------------------
+         RIGHT COLUMN: Output Section
+      --------------------------------*/
+      .output-section {
+        flex: 1 1 500px;
+        background-color: #1e1e1e;
+        border-radius: 8px;
+        padding-top: 5%;
+        min-width: 320px;
+      }
+      .output-section h2{
+        color:rgb(255, 255, 255);
+      }
+
+
+      /* ------------------------------
+         UPDATED CONTAINER DESIGN
+         (Based on your reference code)
+      --------------------------------*/
+      :root {
+        --primary-color: #2070cb;
+        --background-dark: #1b2240;
+        --text-light: #FAFAFA;
+        --danger-color: #ff1c4d;
+        --success-color: #00C851;
+        --card-bg: rgba(255, 255, 255, 0.05);
+      }
+      .container {
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #100c1c;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        margin-top: 1rem;
+      }
+
+      /* ------------------------------
+         UPDATED SEARCH HEADER
+      --------------------------------*/
+      .search-header {
+        display: flex;
+        padding: 8px;
+        background: var(--card-bg);
+        border-radius: 8px;
+        margin-bottom: 0;
+      }
+      .search-header input.address-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: var(--text-light);
+        font-size: 13px;
+        outline: none;
+      }
+      .search-header input.address-input:focus {
+        border-color: var(--primary-color);
+      }
+
+      /* ------------------------------
+         UPDATED TOKEN HEADER
+      --------------------------------*/
+      .token-header {
+        background: var(--card-bg);
+        padding: 4px;
+        margin-bottom: 2px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .header-row {
+        display: grid;
+        grid-template-columns: 70px 1fr 1fr;
+        gap: 2px;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      .image-column {
+        width: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .token-image-placeholder {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .token-image-placeholder img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .name-column {
+        background: var(--card-bg);
+        padding: 6px;
+        border-radius: 6px;
+      }
+      .name-column h3 {
+        font-size: 12px;
+        margin: 0 0 2px 0;
+        opacity: 0.7;
+      }
+      .name-column p {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+        color: var(--text-light);
+      }
+      .token-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-top: 1px;
+      }
+      .token-stat-item {
+        text-align: center;
+        background: var(--card-bg);
+        padding: 2px;
+        border-radius: 3px;
+      }
+      .token-stat-item h4 {
+        font-size: 11px;
+        margin: 0 0 1px 0;
+        opacity: 0.7;
+      }
+      .token-stat-item p {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--text-light);
+      }
+      .cap-column {
+        background: var(--card-bg);
+        padding: 6px;
+        border-radius: 6px;
+      }
+      .cap-column h3 {
+        font-size: 12px;
+        margin: 0 0 2px 0;
+        opacity: 0.7;
+      }
+      .cap-column p {
+        font-size: 14px;
+        margin: 0 0 15px 0;
+        font-weight: 500;
+        color: var(--text-light);
+      }
+      .security-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+        margin-top: 2px;
+      }
+      .security-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        font-size: 11px;
+        background: var(--card-bg);
+        padding: 10px;
+        border-radius: 3px;
+        text-align: center;
+      }
+      .security-item i {
+        font-size: 11px;
+      }
+      .security-item span {
+        font-size: 7.5px;
+      }
+      .success {
+        color: var(--success-color);
+      }
+      .danger {
+        color: var(--danger-color);
+      }
+      .platform-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 12px repeat(3, 1fr);
+        gap: 8px;
+        margin: 5px auto;
+        width: calc(100% - 16px);
+        justify-content: center;
+        align-items: center;
+      }
+      .platform-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        color: var(--text-light);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .platform-link:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-1px);
+        color: var(--primary-color);
+      }
+      .platform-link.inactive {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      .platform-link-spacer {
+        width: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <div class="main-header">
+      <img src="images/logo.gif" alt="Dragon" class="dragon-image" />
+      <h1 class="project-title">Project: Dragon</h1>
+      <h2 class="module-title">Module: Token Info</h2>
+      <p class="bounty-text">Bounty: 0.20% of $DRAGON supply</p>
+      <p class="instructions">
+        Please paste an SPL token contract address in the field provided
+        to test the functionality of your code. The data output is defined
+        in the readme on your main branch. Good luck and godspeed!
+      </p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="layout">
+      <!-- Left Column: Data Field Section -->
+      <div class="data-field-section">
+        <h2>Data Field</h2>
+      
+        <table>
+          <!-- Table header with two columns: Data Field and Output -->
+ 
+      
+          <tbody>
+            <!-- Existing rows from your original code -->
+            <tr>
+              <td><strong>Thumbnail:</strong></td>
+              <td>
+                <img
+                  id="dataThumbnail"
+                  src="images/dragon.png"
+                  alt="Token Icon"
+                  width="35"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Ticker:</strong></td>
+              <td>
+                <span id="dataTickerValue">$DRAGON</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Age:</strong></td>
+              <td>
+                <span id="dataTokenAge">Loading...</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Holders:</strong></td>
+              <td>
+                <span id="dataHoldersCount">Loading...</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>CTO or Dev:</strong></td>
+              <td>
+                <span id="dataCTODev">Loading...</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Market Cap:</strong></td>
+              <td>
+                <span id="dataMarketCap">Loading...</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Mint Auth:</strong></td>
+              <td>
+                <span id="dataMintStatus">
+                  <i class="fas fa-check-circle success"></i> Mint
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Freeze Auth:</strong></td>
+              <td>
+                <span id="dataFreezeStatus">
+                  <i class="fas fa-check-circle success"></i> Freeze
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Liquidity locked:</strong></td>
+              <td>
+                <span id="dataLockedStatus">
+                  <i class="fas fa-check-circle success"></i> Locked
+                </span>
+              </td>
+            </tr>
+            <!-- New rows not in the original code -->
+            <tr>
+              <td><strong>Dex Paid:</strong></td>
+              <td>
+                <span id="dataDexscreener">Link</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Photon Sol:</strong></td>
+              <td>
+                <a id="dataPhotonSol" href="#" target="_blank" class="inactive">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Pump.fun:</strong></td>
+              <td>
+                <a id="dataPumpLink" href="#" target="_blank" class="inactive">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Solscan link:</strong></td>
+              <td>
+                <a
+                  id="dataSolscanLink"
+                  href="#"
+                  target="_blank"
+                  class="inactive"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Dexscreener link:</strong></td>
+              <td>
+                <a
+                  id="dataDexscreenerLink"
+                  href="#"
+                  target="_blank"
+                  class="inactive"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Twitter link:</strong></td>
+              <td>
+                <a
+                  id="dataTwitterLink"
+                  href="#"
+                  target="_blank"
+                  class="inactive"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Telegram link:</strong></td>
+              <td>
+                <a
+                  id="dataTelegramLink"
+                  href="#"
+                  target="_blank"
+                  class="inactive"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Website link:</strong></td>
+              <td>
+                <a
+                  id="dataWebsiteLink"
+                  href="#"
+                  target="_blank"
+                  class="inactive"
+                  >Link</a
+                >
+              </td>
+            </tr>
+      
+          
+          </tbody>
+        </table>
+      </div>
+      
+
+      <!-- Right Column: Output Section -->
+      <div class="output-section">
+        <h2>Module Output</h2>
+        <div class="container">
+          <!-- Updated Search Header -->
+          <div class="search-header">
+            <input
+              type="text"
+              class="address-input"
+              placeholder="Enter contract address..."
+            />
+          </div>
+        </div>
+       
+        <div class="container">
+
+          <!-- Updated Token Header -->
+          <div class="token-header">
+            <div class="header-row">
+              <!-- Image Column -->
+              <div class="image-column">
+                <div class="token-image-placeholder">
+                  <img src="images/dragon.png" alt="Token Icon" />
+                </div>
+              </div>
+              <!-- Name Column -->
+              <div class="name-column">
+                <h3>Ticker</h3>
+                <p id="tickerValue">$DRAGON</p>
+                <div class="token-stats-grid">
+                  <div class="token-stat-item">
+                    <h4>Age</h4>
+                    <p id="tokenAge">Loading....</p>
+                  </div>
+                  <div class="token-stat-item">
+                    <h4>Holders</h4>
+                    <p class="holders-count" id="holdersCount">&gt;150</p>
+                  </div>
+                  <div class="token-stat-item">
+                    <div class="community-status">
+                      <div class="community-icons">
+                        <i class="fas fa-user"></i>
+                      </div>
+                      <span class="community-label">Dev</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Market Cap Column -->
+              <div class="cap-column">
+                <h3>Market Cap</h3>
+                <p id="marketCap">Loading....</p>
+                <div class="security-grid">
+                  <div class="security-item" id="mintStatus">
+                    <i class="fas fa-check-circle success"></i>
+                    <span>Mint</span>
+                  </div>
+                  <div class="security-item" id="freezeStatus">
+                    <i class="fas fa-check-circle success"></i>
+                    <span>Freeze</span>
+                  </div>
+                  <div class="security-item" id="lockedStatus">
+                    <i class="fas fa-check-circle success"></i>
+                    <span>Locked</span>
+                  </div>
+                  <div class="security-item" id="dexStatus">
+                    <i class="fas fa-check-circle success"></i>
+                    <span>DEX</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Platform Links Row -->
+            <div class="platform-links">
+              <a href="#" class="platform-link inactive" title="Photon">
+                <img
+                  src="images/1.png"
+                  alt="Photon Icon"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+              <a
+                href="https://pump.example.com"
+                class="platform-link"
+                title="Pump"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/Pump-Fun-Logo white.png"
+                  alt="Pump Icon"
+                  style="width: 28px; height: 15px;"
+                />
+              </a>
+              <a
+                href="https://solscan.example.com"
+                class="platform-link"
+                title="Solscan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/3.png"
+                  alt="Solscan Icon"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+              <a
+                href="#"
+                class="platform-link"
+                title="DexScreener"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/2.png"
+                  alt="DexScreener Icon"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+              <div class="platform-link-spacer"></div>
+              <a
+                href="#"
+                class="platform-link"
+                title="Website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/website.png"
+                  alt="Website"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+              <a
+                href="https://twitter.com/example"
+                class="platform-link"
+                title="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/4.png"
+                  alt="Twitter Icon"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+              <a
+                href="#"
+                class="platform-link"
+                title="Telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/tele.png"
+                  alt="Telegram"
+                  style="width: 20px; height: 15px;"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example JS includes -->
+    <script src="lib/chart.js"></script>
+    <script src="lib/fontawesome/js/all.min.js"></script>
+    <script src="js/chart2.js"></script>
+    <script type="module" src="js/charts.js"></script>
+    <script src="js/sidepanel.js"></script>
+  </body>
+</html>
