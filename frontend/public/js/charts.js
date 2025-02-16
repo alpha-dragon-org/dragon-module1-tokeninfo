@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        'http://localhost:3000/clearData'
+
       );
       const data = await response.json();
       console.log("Fetched the data!");
@@ -97,7 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const sendContractAddressToBot = async (contractAddress) => {
     try {
       const apiEndpoint =
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3001/sendContractAddress";
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3001/sendContractAddress";
+        'http://localhost:3001/sendContractAddress';
+
+        
       console.log(
         "[DEBUG] Payload being sent:",
         JSON.stringify({ contractAddress })
@@ -130,8 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearAPIData = async () => {
     try {
       const response = await fetch(
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/clearData",
-        { method: "POST" }
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/clearData",
+        "http://localhost:3000/clearData",
+                { method: "POST" }
       );
       if (response.ok) {
         console.log("[INFO] API data cleared successfully.");
@@ -566,7 +572,8 @@ document.addEventListener("DOMContentLoaded", function () {
   async function fetchAndUpdateCTOOrDevStatus() {
     try {
       const response = await fetch(
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        "http://localhost:3000/fetchData"
       );
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
