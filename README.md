@@ -1,21 +1,21 @@
-# Dragon Data Modules
+# Intro to Dragon Data-Modules
 
-Dragon is an open source browser extension designed to visualize deceptions and power concentrations of any token on the Solana blockchain. The extension opens a side panel divided into data-modules that provide various analyses on a project's holder distribution and security metrics. The initial release includes four modules:
+Dragon is a browser extension that visualizes the power concentrations in any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses of a token's power holders. The initial release includes four data-modules:
 
 - **Token Info/Security:** Basic token information such as ticker, age, market cap, and number of holders. Basic security measures such as mint authority, freeze authority, and locked liquidity pool.
 - **Bundle Analysis:** An analysis of any bundled supply still holding (number of active bundles, percentage held in active bundles, number of wallets per bundle, etc.).
 - **Sniper Analysis:** An analysis of any sniped supply still holding (total active snipers, percentage of sniped supply still active, relative timestamp per snipe, etc.).
-- **Holder Analyses:** Currently two analysis of a token's holders: wallet clusters and Top 10. A cluster is a group of wallets that have transferred the token between themselves instead of buying it from an exchange.
+- **Holder Analyses:** Currently two analyses of a token's holders: wallet clusters and Top 10. A cluster is a group of wallets that have transferred the token between themselves instead of buying it from an exchange. The Top 10 are the wallets holding the most supply of the token.
   
-Soon, Dragon will produce analyses on many other holder distributions and deceptive behaviors crowd-sourced by builders and traders in the memecoin trenches.
+Soon, Dragon will provide data-modules analyzing many other kinds of holder distributions and deceptive behaviors for any token project in crypto.
 
 ---
 
 ## Table of Contents
 
-- [Dragon Data Modules](#dragon-data-modules)
+- [Intro to Dragon Data-Modules](#dragon-data-modules)
   - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
+  - [Contribution Overview](#overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
   - [Current Modules \& Bounties](#current-modules--bounties)
@@ -28,11 +28,11 @@ Soon, Dragon will produce analyses on many other holder distributions and decept
 
 ---
 
-## Overview
+## Contribution Overview
 
-Dragon is built with the vision of making complex on-chain analyses accessible and open source. Developers can contribute new modules (or "mods") to add more analyses on a token's distribution. The front-end for the initial four modules is built and gathers data by web-scraping various online tools. Your challenge (and bounty) is to build efficient data pipelines that integrate a Solana node RPC (via [Helius](https://www.helius.dev)) to provide fast, real-time blockchain data.
+Dragon is built with the vision to make data accessible and community-driven. Soon, developers will contribute new modules based on what they think is important to know in the trenches. First, we require an upgrade to the initial four modules that currently gather data by web-scraping online. The challenge then (and bounty) is to build an efficient data pipeline that integrates a module with a Solana RPC (ie. [Helius](https://www.helius.dev)).
 
-By replacing or supplementing web-scraping methods with Helius RPC calls, we can achieve quicker response times and more reliable data updates for the front-end extension.
+By replacing web-scrapes with RPC calls, Dragon will provide real-time data streaming and unbeatable companionship for traders in the trenches.
 
 ---
 
@@ -159,10 +159,10 @@ dragon-data-modules/
 ### Data Field Explanations
 
 1. **Thumbnail**  
-   A small image or icon that visually represents the token.
+   The image that was chosen to represent the token.
 
 2. **Ticker**  
-   The abbreviated symbol for the token.  
+   The symbol that was chosen for the token.  
    **Example:** `$Prawn`
 
 3. **Age**  
@@ -171,58 +171,58 @@ dragon-data-modules/
 
 4. **Holders**  
    The number of distinct wallet addresses currently holding the token.  
-   **Example:** `>150`
+   **Example:** `150`
 
 5. **CTO or Dev**  
-   Indicates the chief technical officer or developer responsible for the token.  
+   Indicates if the token is a "community take over" or is still developer-led.  
    **Example:** `Dev`
 
 6. **Market Cap**  
-   The total value (in USD) of all tokens in circulation.  
+   The total value (in USD) of the token supply in circulation.  
    **Example:** `$584,887`
 
-7. **Mint Auth**  
-   Specifies whether there is authority to mint (create) additional tokens.  
+7. **Mint Authority**  
+   Specifies whether the authority to mint (create) additional tokens has been revoked.  
    **Example:** `Mint`
 
-8. **Freeze Auth**  
-   Specifies whether there is authority to freeze or lock token transfers.  
+8. **Freeze Authority**  
+   Specifies whether the authority to freeze or lock token transfers has been revoked.  
    **Example:** `Freeze`
 
 9. **Liquidity Locked**  
-   Shows whether the liquidity for the token is locked, preventing large early withdrawals.  
+   Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
    **Example:** `Locked`
 
-10. **Dex Paid**  
-    Indicates if fees or payments have been made to list the token on a decentralized exchange.  
-    **Example:** `Loading...`
+10. **DEX Screener Paid**  
+    Indicates if fees have been paid to DEX Screener to officially host the project's socials and materials.  
+    **Example:** `Dex`
 
-11. **Photon Sol**  
-    A link to Photon Sol or a relevant analytics platform.  
+11. **Photon Link**  
+    A link to the token's chart on Photon.  
     **Example:** `Link`
 
-12. **Pump.fun**  
-    A link to the Pump.fun page for this token.  
+12. **Pump.fun Link**  
+    A link to the token's page on Pump.fun (if applicable).  
     **Example:** `Link`
 
 13. **Solscan Link**  
-    A link to the token’s page on the Solscan block explorer.  
+    A link to the token’s contract on the Solscan block explorer.  
     **Example:** `Link`
 
-14. **Dexscreener Link**  
-    A link to the token’s page on Dexscreener for price charts and trading info.  
+14. **DEX Screener Link**  
+    A link to the token's chart on DEX Screener.  
     **Example:** `Link`
 
 15. **Twitter Link**  
-    A link to the official Twitter account for the token/project.  
+    A link to the official Twitter account for the token project.  
     **Example:** `Link`
 
 16. **Telegram Link**  
-    A link to the official Telegram community or announcements channel.  
+    A link to the official Telegram community for the token project.  
     **Example:** `Link`
 
 17. **Website Link**  
-    A link to the official website for the token/project.  
+    A link to the official website for the token project.  
     **Example:** `Link`
 
 ---
