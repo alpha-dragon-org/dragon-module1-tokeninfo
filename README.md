@@ -14,7 +14,7 @@ Soon, Dragon will provide data-modules analyzing many other kinds of holder dist
 ## Table of Contents
 
 - [Intro to Dragon Data-Modules](#dragon-data-modules)
-  - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
   - [Contribution Overview](#overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
