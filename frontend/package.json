@@ -1,0 +1,14 @@
+{
+    "name": "dragon-dashboard-frontend",
+    "version": "1.0.0",
+    "description": "Front-end for Dragon Dashboard",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
+  

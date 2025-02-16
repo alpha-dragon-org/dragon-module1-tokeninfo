@@ -1,0 +1,21 @@
+{
+  "name": "dragon-data-modules",
+  "version": "1.0.0",
+  "description": "Data modules for Dragon analysis",
+  "main": "src/api/server.js",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "telegram": "node src/telegram/telegramClient.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "prompt-sync": "^4.2.0",
+    "puppeteer": "^13.0.0",
+    "telegram": "^2.0.0"
+  },
+  "license": "MIT"
+}
