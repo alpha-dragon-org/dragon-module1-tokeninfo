@@ -86,7 +86,7 @@ dragon-data-modules/
 
    ```bash
    git clone https://github.com/alpha-dragon-dev/dragon-module1-tokeninfo.git
-   cd dragon-data-modules
+   cd dragon-module1-tokeninfo
    ```
 
 2. **Install Dependencies:**
