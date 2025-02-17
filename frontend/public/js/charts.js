@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(
         // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
-        'http://localhost:3000/clearData'
+        'http://localhost:3000/fetchData'
 
       );
       const data = await response.json();
