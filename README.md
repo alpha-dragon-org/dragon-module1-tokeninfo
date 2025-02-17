@@ -15,12 +15,12 @@ Soon, Dragon will provide data-modules analyzing many other kinds of power distr
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
+  - [Contributing](#contributing)
   - [Current Modules \& Bounties](#current-modules--bounties)
     - [Token Info Analysis](#token-info-analysis)
     - [Data Field Explanations](#data-field-explanations)
   - [Using Helius RPC for Open Source Integration](#using-helius-rpc-for-open-source-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
-  - [Contributing](#contributing)
   - [License](#license)
 
 ---
@@ -133,6 +133,33 @@ dragon-data-modules/
    http://localhost:8080/
    ```
 
+---
+
+## Contributing
+
+We welcome contributions from the community! To contribute:
+
+1. **Fork the Repository**
+
+2. **Create a Feature Branch:**
+
+   ```bash
+   git checkout -b feature/new-module
+   ```
+
+3. **Commit Your Changes:**
+
+   ```bash
+   git commit -am 'Add new module for XYZ'
+   ```
+
+4. **Push the Branch:**
+
+   ```bash
+   git push origin feature/new-module
+   ```
+
+5. **Open a Pull Request** describing your changes and the module you are adding.
 
 
 ---
@@ -253,33 +280,6 @@ These future modules will be developed by community contributions and bounty rew
 
 ---
 
-## Contributing
-
-We welcome contributions from the community! To contribute:
-
-1. **Fork the Repository**
-
-2. **Create a Feature Branch:**
-
-   ```bash
-   git checkout -b feature/new-module
-   ```
-
-3. **Commit Your Changes:**
-
-   ```bash
-   git commit -am 'Add new module for XYZ'
-   ```
-
-4. **Push the Branch:**
-
-   ```bash
-   git push origin feature/new-module
-   ```
-
-5. **Open a Pull Request** describing your changes and the module you are adding.
-
----
 
 ## License
 
