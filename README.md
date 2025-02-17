@@ -1,10 +1,10 @@
 # Intro to Dragon Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations in any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses of a token's power holders. The initial release includes four data-modules, and the module of focus for this bounty is:
+Dragon is a browser extension that visualizes the power concentrations in any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses of a token's powerful holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
 - **Token Info/Security:** Basic token information such as ticker, age, market cap, and number of holders. Basic security measures such as mint authority, freeze authority, and locked liquidity pool.
   
-Soon, Dragon will provide data-modules analyzing many other kinds of holder distributions and deceptive behaviors for any token project in crypto.
+Soon, Dragon will provide data-modules analyzing many other kinds of power distributions for any token project in crypto.
 
 ---
 
