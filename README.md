@@ -136,7 +136,7 @@ dragon-data-modules/
 ---
 
 
-## Current Modules & Bounties
+## Module Details
 
  The details for the Module (Token Info)  are outlined below:
 
