@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataPumpLink && pumpFunLink) {
       dataPumpLink.href = pumpFunLink;
       dataPumpLink.classList.remove("inactive");
-      dataPumpLink.textContent = "Link";
+      dataPumpLink.textContent = pumpFunLink.substring(0, 30);
       console.log("[INFO] Data Pump Fun link updated:", pumpFunLink);
     } else if (dataPumpLink) {
       dataPumpLink.classList.add("inactive");
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataSolscanLink && solscanLink) {
       dataSolscanLink.href = solscanLink;
       dataSolscanLink.classList.remove("inactive");
-      dataSolscanLink.textContent = "Link";
+      dataSolscanLink.textContent = solscanLink.substring(0, 30);
       console.log("[INFO] Data Solscan link updated:", solscanLink);
     } else if (dataSolscanLink) {
       dataSolscanLink.classList.add("inactive");
@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataDexscreenerLink && dexscreenerLink) {
       dataDexscreenerLink.href = dexscreenerLink;
       dataDexscreenerLink.classList.remove("inactive");
-      dataDexscreenerLink.textContent = "Link";
+      dataDexscreenerLink.textContent = dexscreenerLink.substring(0, 30);
       console.log("[INFO] Data Dexscreener link updated:", dexscreenerLink);
     } else if (dataDexscreenerLink) {
       dataDexscreenerLink.classList.add("inactive");
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataTwitterLink && twitterLink) {
       dataTwitterLink.href = twitterLink;
       dataTwitterLink.classList.remove("inactive");
-      dataTwitterLink.textContent = "Link";
+      dataTwitterLink.textContent = twitterLink.substring(0, 30);
       console.log("[INFO] Data Twitter link updated:", twitterLink);
     } else if (dataTwitterLink) {
       dataTwitterLink.classList.add("inactive");
@@ -381,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataTelegramLink && telegramLink) {
       dataTelegramLink.href = telegramLink;
       dataTelegramLink.classList.remove("inactive");
-      dataTelegramLink.textContent = "Link";
+      dataTelegramLink.textContent = telegramLink.substring(0, 30);
       console.log("[INFO] Data Telegram link updated:", telegramLink);
     } else if (dataTelegramLink) {
       dataTelegramLink.classList.add("inactive");
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dataWebsiteLink && websiteLink) {
       dataWebsiteLink.href = websiteLink;
       dataWebsiteLink.classList.remove("inactive");
-      dataWebsiteLink.textContent = "Link";
+      dataWebsiteLink.textContent = websiteLink.substring(0, 30);
       console.log("[INFO] Data Website link updated:", websiteLink);
     } else if (dataWebsiteLink) {
       dataWebsiteLink.classList.add("inactive");
