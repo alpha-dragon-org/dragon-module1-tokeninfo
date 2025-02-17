@@ -85,7 +85,7 @@ dragon-data-modules/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/alpha-dragon-dev/dragon-data-modules.git
+   git clone https://github.com/alpha-dragon-dev/dragon-module1-tokeninfo.git
    cd dragon-data-modules
    ```
 
