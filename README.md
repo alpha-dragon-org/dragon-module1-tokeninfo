@@ -138,17 +138,11 @@ dragon-data-modules/
 
 ## Module Details
 
- The details for the Module (Token Info)  are outlined below:
+ The details for this module are outlined below:
 
-### Token Info Analysis
-
-- **Build:** Token Info  
-- **Bounty:** 0.xx% of $DRAGON supply  
-- **Details:**  
-  The front-end is built. We need to build an RPC pipeline via our Helius node to fetch detailed token information, such as the ticker, thumbnail image, token age, market cap, number of holders, and more.
-
-- **Job Repo:**  
-  See job, Go to repo
+- **Module Name:** Token Info  
+- **Bounty:** 0.20% of $DRAGON supply  
+- **Details:** Front end is built. Need an RPC pipeline via Helius node. Data to get includes: Ticker, Thumbnail image, Token age, Market cap, # of holders, and more.
 
 ---
 
@@ -159,67 +153,70 @@ dragon-data-modules/
 
 2. **Ticker**  
    The symbol that was chosen for the token.  
-   **Example:** `$Prawn`
+   **Example Output:** `$Prawn`
 
 3. **Age**  
-   How long the token has been in existence.  
-   **Example:** `1 d` (1 day old)
+   How long the token has been in existence. At the moment, the front end is displayed in units from hours to years. In the back-end we are looking to increases precision to include minutes. At the moment, the front-end will only show 0 hours if the token is less than 1 hour old.
+   **Example Output:** `23 hrs 4 mins` (front-end: 23 h)
+   **Example Output:** `23 mins` (front-end: 0 h)
+   **Example Output:** `9 months 21 days 4 hours 15 mins` (front-end: 9 m)
+   
+5. **Holders**  
+   The number of distinct wallet addresses currently holding the token. At the moment, the front-end will only show ">150" but that will be updated after this bounty.
+   **Example Output:** `9,088` (front-end: >150)
+   **Example Output:** `141` (front-end: 141)
 
-4. **Holders**  
-   The number of distinct wallet addresses currently holding the token.  
-   **Example:** `150`
+7. **CTO or Dev**  
+   Indicates if the token is a "community take over" as defined by CTO pur on DEX Screener or is still developer-led.  
+   **Example Output:** `Dev`
 
-5. **CTO or Dev**  
-   Indicates if the token is a "community take over" or is still developer-led.  
-   **Example:** `Dev`
-
-6. **Market Cap**  
+8. **Market Cap**  
    The total value (in USD) of the token supply in circulation.  
-   **Example:** `$584,887`
+   **Example Output:** `$584,887`
 
-7. **Mint Authority**  
+9. **Mint Authority**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
-   **Example:** `Mint`
+   **Example Output:** `Mint`
 
-8. **Freeze Authority**  
+10. **Freeze Authority**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
-   **Example:** `Freeze`
+   **Example Output:** `Freeze`
 
-9. **Liquidity Locked**  
+11. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
-   **Example:** `Locked`
+   **Example Output:** `Locked`
 
-10. **DEX Screener Paid**  
+12. **DEX Screener Paid**  
     Indicates if fees have been paid to DEX Screener to officially host the project's socials and materials.  
-    **Example:** `Dex`
+    **Example Output:** `Dex`
 
-11. **Photon Link**  
+13. **Photon Link**  
     A link to the token's chart on Photon.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-12. **Pump.fun Link**  
+14. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-13. **Solscan Link**  
+15. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-14. **DEX Screener Link**  
+16. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-15. **Twitter Link**  
+17. **Twitter Link**  
     A link to the official Twitter account for the token project.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-16. **Telegram Link**  
+18. **Telegram Link**  
     A link to the official Telegram community for the token project.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
-17. **Website Link**  
+19. **Website Link**  
     A link to the official website for the token project.  
-    **Example:** `Link`
+    **Example Output:** `Link`
 
 ---
 
