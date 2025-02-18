@@ -18,8 +18,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
   - [Bounty Details](#bounty-details)
-    - [Token Info Analysis](#token-info-analysis)
-    - [Data to Fetch](#data-to-fetch)
+  - [Data to Fetch](#data-to-fetch)
   - [Using Helius RPC for Open Source Integration](#using-helius-rpc-for-open-source-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
   - [Contributing](#contributing)
@@ -142,80 +141,81 @@ dragon-data-modules/
 
 - **Module Name:** Token Info  
 - **Bounty:** 0.15% of $DRAGON supply  
-- **Goal:** Create a pipeline to an RPC that retrieves all data below in real-time and with extremely high accuracy.
+- **Goal:** Retrieve all data below in real-time and with extremely high accuracy.
 
 ---
 
 ### Data To Fetch
 
 1. **Thumbnail**  
-   The image that was chosen to represent the token across exchanges in the trading platforms.  
+   The image that was chosen to represent the token across exchanges and trading platforms.  
    **Example Output:** <img src="https://assets.coingecko.com/coins/images/53854/standard/dogeai_pfp.jpg?1737610397" width="20">
 
 3. **Ticker**  
-   The alpha-nummeric string that was chosen to represent the token across exchanges.  
+   The alpha-numeric string that was chosen to represent the token across exchanges and trading platforms.  
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long the token has been in existence. **Note:** At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.  
-   **Example Output:** `23 hrs 4 mins` (front-end: 23 h)
-   **Example Output:** `23 mins` (front-end: 0 h)
-   **Example Output:** `9 months 21 days 4 hours 15 mins` (front-end: 9 m)
+   How long it has been since the token generation event. *Note:* In this iteration, the front-end is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display if the token is less than 1 hour old.  
+   **Example Output:** `23 hrs 4 mins` (23 h)  
+   **Example Output:** `54 mins` (0 h)  
+   **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo)
    
 6. **Holders**  
-   The number of distinct wallet addresses currently holding the token. At the moment, the front-end will only show ">150" but that will be updated after this bounty.  
-   **Example Output:** `9,088` (front-end: >150)
-   **Example Output:** `141` (front-end: 141)
+   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the front-end only shows ">150" as the upper bound.  
+   **Example Output:** `9,088` (>150)  
+   **Example Output:** `141` (141)
 
 7. **CTO or Dev**  
-   Indicates if the token is a "community take over" as defined by CTO pur on DEX Screener or is still developer-led.  
+   Indicates if the token project has undergone a "community take over" as defined by purchasing the option on DEX Screener OR if it is still a developer-led project.  
+   **Metadata:** If the project is still developer-led, the metadata is equivalent to the dev wallet's link on Solscan.  
    **Example Output:** `Dev`
 
-8. **Market Cap**  
-   The total value (in USD) of the token supply in circulation.  
+9. **Market Cap**  
+   The real-time total value (in USD) of the token supply in circulation.  
    **Example Output:** `$584,887`
 
-9. **Mint Authority**  
+10. **Mint Authority**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
    **Example Output:** `Mint`
 
-10. **Freeze Authority**  
+11. **Freeze Authority**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
    **Example Output:** `Freeze`
 
-11. **Liquidity Locked**  
+12. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
    **Example Output:** `Locked`
 
-12. **DEX Screener Paid**  
-    Indicates if fees have been paid to DEX Screener to officially host the project's social links and materials. Currently, this is not available by web-scrape.  
+13. **DEX Screener Paid**  
+    Indicates if fees have been paid to DEX Screener to host the project's social links and images/materials. Currently, this data is not available by web-scrape.  
     **Example Output:** `Dex`
 
-13. **Photon Link**  
-    A link to the token's chart on Photon. Currently, this is not available by web-scrape.  
-    **Example Output:** `Link`
+14. **Photon Link**  
+    A link to the token's chart on Photon. Currently, this data is not available by web-scrape.  
+    **Example Output:** `[Link](https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb)`
 
-14. **Pump.fun Link**  
+15. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
-    **Example Output:** `Link`
+    **Example Output:** `[Link](https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap)`
 
-15. **Solscan Link**  
+16. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
     **Example Output:** `Link`
 
-16. **DEX Screener Link**  
+17. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
     **Example Output:** `Link`
 
-17. **Twitter Link**  
+18. **Twitter Link**  
     A link to the official Twitter account for the token project.  
     **Example Output:** `Link`
 
-18. **Telegram Link**  
+19. **Telegram Link**  
     A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
     **Example Output:** `Link`
 
-19. **Website Link**  
+20. **Website Link**  
     A link to the official website for the token project.  
     **Example Output:** `Link`
 
