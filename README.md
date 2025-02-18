@@ -22,6 +22,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
   - [Contributing](#contributing)
+  - [Issues](#Issues)
   - [License](#license)
 
 ---
