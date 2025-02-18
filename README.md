@@ -289,6 +289,6 @@ Please report any software “bugs” or other problems with this module through
 This project is open source and available under [the MIT License](https://opensource.org/license/mit).
 
 ---
-<img src="https://raw.githubusercontent.com/dragon-dev-admin/website/refs/heads/main/icon-128.png" width="50">
+<img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/public/images/logo.gif?raw=true" width="200">
 Happy coding. Get that money.
 
