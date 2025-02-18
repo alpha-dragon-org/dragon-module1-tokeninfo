@@ -261,19 +261,22 @@ We welcome contributions from the community! To contribute:
    git checkout -b feature/new-module
    ```
 
-3. **Commit Your Changes:**
+3. **Replace server.js, tokeninfo.js, apiutils.js, and telegramutils.js with your code snippets**
+
+
+4. **Commit Your Changes:**
 
    ```bash
    git commit -am 'Add new module for XYZ'
    ```
 
-4. **Push the Branch:**
+5. **Push the Branch:**
 
    ```bash
    git push origin feature/new-module
    ```
 
-5. **Open a Pull Request** describing your changes and the module you are adding.
+6. **Open a Pull Request** describing your changes and the module you are adding.
 
 
 ---
