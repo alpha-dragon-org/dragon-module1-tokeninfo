@@ -177,45 +177,45 @@ dragon-data-modules/
 
 10. **Mint Authority**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
-   **Example Output:** `Mint`
+   **Example Output:** ✅
 
 11. **Freeze Authority**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
-   **Example Output:** `Freeze`
-
-12. **Liquidity Locked**  
+   **Example Output:** ✅
+    
+13. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
-   **Example Output:** `Locked`
+   **Example Output:** ✅
 
-13. **DEX Screener Paid**  
+14. **DEX Screener Paid**  
     Indicates if fees have been paid to DEX Screener to host the project's social links and images/materials. Currently, this data is not available by web-scrape.  
-    **Example Output:** `Dex`
+    **Example Output:** ❌
 
-14. **Photon Link**  
+15. **Photon Link**  
     A link to the token's chart on Photon. Currently, this data is not available by web-scrape.  
     **Example Output:** `[Link](https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb)`
 
-15. **Pump.fun Link**  
+16. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
     **Example Output:** `[Link](https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap)`
 
-16. **Solscan Link**  
+17. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
     **Example Output:** `Link`
 
-17. **DEX Screener Link**  
+18. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
     **Example Output:** `Link`
 
-18. **Twitter Link**  
+19. **Twitter Link**  
     A link to the official Twitter account for the token project.  
     **Example Output:** `Link`
 
-19. **Telegram Link**  
+20. **Telegram Link**  
     A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
     **Example Output:** `Link`
 
-20. **Website Link**  
+21. **Website Link**  
     A link to the official website for the token project.  
     **Example Output:** `Link`
 
