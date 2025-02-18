@@ -284,11 +284,12 @@ Dragon encourages contributions from the community! To contribute:
 
 Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
 
+---
 ## License
 
 This project is open source and available under [the MIT License](https://opensource.org/license/mit).
 
-
+---
 <img src="https://raw.githubusercontent.com/dragon-dev-admin/website/refs/heads/main/icon-128.png" width="50">
 Happy coding. Get that money.
 
