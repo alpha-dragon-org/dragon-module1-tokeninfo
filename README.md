@@ -18,7 +18,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
   - [Bounty Details](#bounty-details)
-  - [Data to Fetch](#data-to-fetch)
+      - [Data to Fetch](#data-to-fetch)
   - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
   - [Contributing](#contributing)
@@ -144,7 +144,6 @@ dragon-data-modules/
 - **Bounty:** 0.15% of $DRAGON supply  
 - **Goal:** Retrieve all data below in real-time and with extremely high accuracy.
 
----
 
 ### Data To Fetch
 
