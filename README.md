@@ -40,42 +40,42 @@ By replacing web-scrapes with RPCs, Dragon will produce real-time data for trade
 
 ```
 dragon-data-modules/
-├── package.json             # Project metadata and dependencies
+├── package.json             # Project metadata and node dependencies
 ├── README.md                # This file
 ├── src
 │   ├── api
-│   │   └── server.js        # Express API server for data storage and retrieval # CONNECT TO ENDPOINT IN THIS FILE
+│   │   └── server.js        # Express API server for data storage and retrieval which connects to the endpoints
 │   ├── config
 │   │   └── config.js        # Configuration file (ports, API keys, Helius RPC endpoint)
 │   ├── modules
 │   │   ├── bundleAnalysis.js   # Module for Bundle Analysis
 │   │   ├── clusterAnalysis.js  # Module for Cluster Analysis
-│   │   ├── tokenInfo.js        # Module for Token Info (Helius RPC integration) # MAKE CHANGES IN THIS FILE
+│   │   ├── tokenInfo.js        # Module for Token Info (Helius RPC integration) 
 │   │   └── sniperAnalysis.js   # Module for Sniper Analysis (Helius RPC)
 │   ├── telegram
-│   │   └── telegramClient.js   # Telegram API integration & message processing
+│   │   └── telegramClient.js   # Telegram API integration & message processing which is used for tokenInfo.js and sniperAnalysis.js 
 │   └── utils
 │       ├── apiUtils.js         # Utility functions for API communication
 │       └── telegramUtils.js    # Utility functions for parsing Telegram messages
 │
 └── frontend                  # Frontend code for the developer to test the backend
     ├── node_modules
-    ├── public
+    ├── public                # Contains static assets like images and stylesheets
     │   ├── css
-    │   │   └── styles.css
+    │   │   └── styles.css    
     │   ├── images
     │   └── js
     │       ├── chart2.js
-    │       ├── charts.js
+    │       ├── charts.js    # Contains the frontend logic and connection requests to the backend 
     │       └── sidepanel.js
     ├── lib
     │   ├── fontawesome
     │   ├── chart.js
     │   └── vis-network.min.js
-    ├── index.html
+    ├── index.html           # The main entry point of the frontend, to all scripts and server
     ├── package-lock.json
-    ├── package.json
-    └── server.js
+    ├── package.json         # Manage dependencies and configurations for frontend
+    └── server.js            # A backend entry point or middleware for API interaction
 
 ```
 
