@@ -142,7 +142,7 @@ dragon-data-modules/
 
 - **Module Name:** Token Info  
 - **Bounty:** 0.15% of $DRAGON supply  
-- **Goal:** Retrieve all data below in real-time and with extremely high accuracy.
+- **Goals:** Retrieve all data below in real-time and with extremely high accuracy.
 
 
 ### Data To Fetch
