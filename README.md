@@ -28,9 +28,9 @@ Soon, developers will contribute their own modules to Dragon based on what they 
 
 ## Contribution Overview
 
-Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)) to replace all scrapes. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Bounty Details](#bounty-details) below.
+Each of Dragon's first four modules currently gathers data by web-scraping TrenchyBot, TrenchRadar, and Bubblemaps. The task is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Bounty Details](#bounty-details) below.
 
-By replacing web-scrapes with RPCs, Dragon will produce real-time data for traders and become an unbeatable companion in the trenches.
+By fetching real-time data directly from a node, Dragon will become an unbeatable companion in the trenches.
 
 ---
 
@@ -114,12 +114,13 @@ dragon-data-modules/
    npm start
    ```
 
-   And then start the Telegram client (which also includes a small Express server) in another terminal:
+   Then start the Telegram client (which also includes a small Express server) in another terminal:
 
    ```bash
    npm run telegram
    ```
 5. **View results on frontend.**
+
    Start the API server to fetch data from backend:
 
    ```bash
@@ -151,24 +152,24 @@ dragon-data-modules/
    **Example Output:** <img src="https://assets.coingecko.com/coins/images/53854/standard/dogeai_pfp.jpg?1737610397" width="20">
 
 3. **Ticker**  
-   The alpha-numeric string that was chosen to represent the token across exchanges and trading platforms.  
+   The alpha-numeric string that represents the token across exchanges and trading platforms.  
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long it has been since the token generation event. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display if the token is less than 1 hour old.  
+   How long it has been since the token generation event. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display for now if the token is less than 1 hour old.  
    **Example Output:** `23 hrs 4 mins` (23 h)  
    **Example Output:** `54 mins` (0 h)  
    **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo)
    
 6. **Holders**  
-   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the frontend only shows ">150" as the upper bound.  
+   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the frontend only goes to ">150" as the upper bound.  
    **Example Output:** `9,088` (>150)  
    **Example Output:** `141` (141)
 
 7. **CTO or Dev**  
-   Indicates if the token project has undergone a "community take over" as defined by purchasing the option on DEX Screener OR if it is still a developer-led project.  
-   **Metadata Example:** If the project is still developer-led, `https://solscan.io/account/J5DTWzM9ArZPjfymj4Y8CsRqM82ywLM34Q6nS6vjauez`  
-   **Example Output:** `Dev`
+   Indicates if the token project has undergone a "community take over" as defined by purchasing the package on DEX Screener OR if it is still a developer-led project.  
+   **Example Output:** `Dev`  
+   **Metadata Example:** `https://solscan.io/account/J5DTWzM9ArZPjfymj4Y8CsRqM82ywLM34Q6nS6vjauez`  
 
 9. **Market Cap**  
    The real-time total value (in USD) of the token supply in circulation.  
@@ -196,48 +197,48 @@ dragon-data-modules/
 
 16. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
-    **Example Output:** `https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap`
+    **Metadata Example:** `https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap`
 
 17. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
-    **Example Output:** `https://solscan.io/token/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump`
+    **Metadata Example:** `https://solscan.io/token/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump`
 
 18. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
-    **Example Output:** `https://dexscreener.com/solana/3d7prdyq3cvrxfboxryekr3dyyco2anyupv9d9bauoyh`
+    **Metadata Example:** `https://dexscreener.com/solana/3d7prdyq3cvrxfboxryekr3dyyco2anyupv9d9bauoyh`
 
 19. **X Link**  
     A link to the official X account for the token project.  
-    **Example Output:** `https://x.com/dogeai_gov`
+    **Metadata Example:** `https://x.com/dogeai_gov`
 
 20. **Telegram Link**  
     A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.  
-    **Example Output:** `t.me/dogeAI`
+    **Metadata Example:** `t.me/dogeAI`
 
 21. **Website Link**  
     A link to the official website for the token project. Currently, this data is not available by web-scrape.  
-    **Example Output:** `https://dogeai.info/`
+    **Metadata Example:** `https://dogeai.info/`
 
 ---
 
 ## Using Helius RPC for Integration
 
-[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping** and **enhance data accuracy.** 
+[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
 
 **How to update the code**
 - **Modify the stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
 - **Leverage the configured endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
 - **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
 
-*Note:* If any data can not be retrieved from Helius, the developer can use whatever means necessary.
+*Note:* If any data can not be retrieved from RPC, or if data can be faster achieved via another method such as data-streaming, the developer can use the alternative method with a brief explanation for their choice.
 
 ---
 
 ## Future Bounties
 
-Dragon’s aim is to make data analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more analyses on holder distributions and deception tactics used on token supply.
+Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
 
-If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) and start working for that bounty!
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 
