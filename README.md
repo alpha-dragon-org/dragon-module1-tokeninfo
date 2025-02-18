@@ -288,7 +288,7 @@ Please report any software “bugs” or other problems with this module through
 
 This project is open source and available under [the MIT License](https://opensource.org/license/mit).
 
-Happy coding. Get that money.
 
 <img src="https://raw.githubusercontent.com/dragon-dev-admin/website/refs/heads/main/icon-128.png" width="50">
+Happy coding. Get that money.
 
