@@ -1,10 +1,10 @@
 # Intro to Dragon Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations in any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses of a token's powerful holders. This initial release includes four data-modules, and the module of focus for this bounty is:
+Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
-- **Token Info/Security:** Basic token information such as ticker, age, market cap, and number of holders. Basic security measures such as mint authority, freeze authority, and locked liquidity pool.
+- **Token Info/Security:** Basic token information such as ticker, age, market cap, and number of holders. Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
   
-Soon, Dragon will provide data-modules analyzing many other kinds of power distributions for any token project in crypto.
+Soon, Dragon will provide data-modules analyzing many other kinds of power distributions for any project in crypto.
 
 ---
 
@@ -43,13 +43,13 @@ dragon-data-modules/
 ├── README.md                # This file
 ├── src
 │   ├── api
-│   │   └── server.js        # Express API server for data storage and retrieval
+│   │   └── server.js        # Express API server for data storage and retrieval # CONNECT TO ENDPOINT IN THIS FILE
 │   ├── config
 │   │   └── config.js        # Configuration file (ports, API keys, Helius RPC endpoint)
 │   ├── modules
 │   │   ├── bundleAnalysis.js   # Module for Bundle Analysis
 │   │   ├── clusterAnalysis.js  # Module for Cluster Analysis
-│   │   ├── tokenInfo.js        # Module for Token Info (Helius RPC integration)
+│   │   ├── tokenInfo.js        # Module for Token Info (Helius RPC integration) # MAKE CHANGES IN THIS FILE
 │   │   └── sniperAnalysis.js   # Module for Sniper Analysis (Helius RPC)
 │   ├── telegram
 │   │   └── telegramClient.js   # Telegram API integration & message processing
