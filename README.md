@@ -157,65 +157,65 @@ dragon-data-modules/
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long the token has been in existence. **Note:** At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.
+   How long the token has been in existence. **Note:** At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.  
    **Example Output:** `23 hrs 4 mins` (front-end: 23 h)
    **Example Output:** `23 mins` (front-end: 0 h)
    **Example Output:** `9 months 21 days 4 hours 15 mins` (front-end: 9 m)
    
-5. **Holders**  
-   The number of distinct wallet addresses currently holding the token. At the moment, the front-end will only show ">150" but that will be updated after this bounty.
+6. **Holders**  
+   The number of distinct wallet addresses currently holding the token. At the moment, the front-end will only show ">150" but that will be updated after this bounty.  
    **Example Output:** `9,088` (front-end: >150)
    **Example Output:** `141` (front-end: 141)
 
-6. **CTO or Dev**  
+7. **CTO or Dev**  
    Indicates if the token is a "community take over" as defined by CTO pur on DEX Screener or is still developer-led.  
    **Example Output:** `Dev`
 
-7. **Market Cap**  
+8. **Market Cap**  
    The total value (in USD) of the token supply in circulation.  
    **Example Output:** `$584,887`
 
-8. **Mint Authority**  
+9. **Mint Authority**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
    **Example Output:** `Mint`
 
-9. **Freeze Authority**  
+10. **Freeze Authority**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
    **Example Output:** `Freeze`
 
-10. **Liquidity Locked**  
+11. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
    **Example Output:** `Locked`
 
-11. **DEX Screener Paid**  
-    Indicates if fees have been paid to DEX Screener to officially host the project's social links and materials. Currently, this is not available by web-scrape.
+12. **DEX Screener Paid**  
+    Indicates if fees have been paid to DEX Screener to officially host the project's social links and materials. Currently, this is not available by web-scrape.  
     **Example Output:** `Dex`
 
-12. **Photon Link**  
-    A link to the token's chart on Photon. Currently, this is not available by web-scrape.
+13. **Photon Link**  
+    A link to the token's chart on Photon. Currently, this is not available by web-scrape.  
     **Example Output:** `Link`
 
-13. **Pump.fun Link**  
+14. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
     **Example Output:** `Link`
 
-14. **Solscan Link**  
+15. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
     **Example Output:** `Link`
 
-15. **DEX Screener Link**  
+16. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
     **Example Output:** `Link`
 
-16. **Twitter Link**  
+17. **Twitter Link**  
     A link to the official Twitter account for the token project.  
     **Example Output:** `Link`
 
-17. **Telegram Link**  
+18. **Telegram Link**  
     A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
     **Example Output:** `Link`
 
-18. **Website Link**  
+19. **Website Link**  
     A link to the official website for the token project.  
     **Example Output:** `Link`
 
