@@ -18,11 +18,10 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
   - [Bounty Details](#bounty-details)
-      - [Data to Fetch](#data-to-fetch)
   - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
-  - [Future Bounties \& Modules](#future-bounties--modules)
+  - [Future Bounties](#future-bounties)
   - [Contributing](#contributing)
-  - [Issues](#Issues)
+  - [Issues](#issues)
   - [License](#license)
 
 ---
@@ -225,32 +224,34 @@ dragon-data-modules/
 
 [Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping** and **enhance data accuracy.** 
 
-**How to Update the Current Code**
-- **Modify the Stub Functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
-- **Leverage Configured Endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
-- **Improve Performance:** Integrate batching of RPC calls if necessary to further improve response time.
+**How to update the code**
+- **Modify stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
+- **Leverage configured endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
+- **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
 
 *Note:* If any data can not be retrieved from Helius, the developer can use whatever means necessary.
 
 ---
 
-## Future Bounties & Modules
+## Future Bounties
 
-Dragon is an evolving project. In addition to the current four modules, future bounties will include:
+Dragon’s aim is to make data analyses more transparent and community-driven. After the initial four modules, bounties will expand to developing modules for:
 
-- **Deception Metrics Module:** Analyze deceptive practices in token projects and flag potential red flags.
-- **Holder Distribution Analysis:** Provide a detailed breakdown of token holders, including concentration analysis.
-- **Liquidity Analysis:** Monitor and report on liquidity pool dynamics and trading activities.
-- **Community Sentiment Analysis:** Integrate social media and on-chain data to gauge community sentiment.
-- **New Metrics Modules:** Based on community feedback and emerging trends, new modules can be crowd-sourced and developed.
+- **Liquidity Analyses**
+- **Sentiment Analyses**
+- **Honey Pot Analyses**
+- **Volume Bot Analyses**
+- **Social Engagement Analyses**
+- **Copy Trader Analyses**
+- **Blue Chip Analyses**
+- **Fresh Wallet Analyses**
+- **more...**
 
-These future modules will be developed by community contributions and bounty rewards. If you have a new idea or module that could benefit the Dragon ecosystem, feel free to propose it and start working on a bounty.
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) and start working for that bounty!
 
 ---
 
 ## Contributing
-
-Dragon encourages contributions from the community! To contribute:
 
 1. **Fork the repository.**
 
@@ -275,7 +276,7 @@ Dragon encourages contributions from the community! To contribute:
    git push origin feature/new-module
    ```
 
-6. **Open a pull request describing your changes and the module you have contributed.**
+6. **Open a pull request describing your changes and the code you have contributed.**
 
 
 ---
