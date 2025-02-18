@@ -19,7 +19,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Setup \& Installation](#setup--installation)
   - [Bounty Details](#bounty-details)
   - [Data to Fetch](#data-to-fetch)
-  - [Using Helius RPC for Open Source Integration](#using-helius-rpc-for-open-source-integration)
+  - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
   - [Contributing](#contributing)
   - [License](#license)
@@ -168,71 +168,69 @@ dragon-data-modules/
 
 7. **CTO or Dev**  
    Indicates if the token project has undergone a "community take over" as defined by purchasing the option on DEX Screener OR if it is still a developer-led project.  
-   **Metadata:** If the project is still developer-led, the metadata is equivalent to the dev wallet's link on Solscan.  
+   **Metadata Example:** If the project is still developer-led, `https://solscan.io/account/J5DTWzM9ArZPjfymj4Y8CsRqM82ywLM34Q6nS6vjauez`  
    **Example Output:** `Dev`
 
 9. **Market Cap**  
    The real-time total value (in USD) of the token supply in circulation.  
    **Example Output:** `$584,887`
 
-10. **Mint Authority**  
+10. **Mint Authority Revoked**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
-   **Example Output:** ✅
+   **Example Output:** `True` (✅)
 
-11. **Freeze Authority**  
+11. **Freeze Authority Revoked**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
-   **Example Output:** ✅
+   **Example Output:** `True` (✅)
     
 13. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
-   **Example Output:** ✅
+   **Example Output:** `True` (✅)
 
 14. **DEX Screener Paid**  
     Indicates if fees have been paid to DEX Screener to host the project's social links and images/materials. Currently, this data is not available by web-scrape.  
-    **Example Output:** ❌
+    **Example Output:** `False` (❌)
 
 15. **Photon Link**  
     A link to the token's chart on Photon. Currently, this data is not available by web-scrape.  
-    **Example Output:** `[Link](https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb)`
+    **Metadata Example:** `https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb`
 
 16. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
-    **Example Output:** `[Link](https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap)`
+    **Example Output:** `https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap`
 
 17. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
-    **Example Output:** `Link`
+    **Example Output:** `https://solscan.io/token/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump`
 
 18. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
-    **Example Output:** `Link`
+    **Example Output:** `https://dexscreener.com/solana/3d7prdyq3cvrxfboxryekr3dyyco2anyupv9d9bauoyh`
 
-19. **Twitter Link**  
-    A link to the official Twitter account for the token project.  
-    **Example Output:** `Link`
+19. **X Link**  
+    A link to the official X account for the token project.  
+    **Example Output:** `https://x.com/dogeai_gov`
 
 20. **Telegram Link**  
-    A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
-    **Example Output:** `Link`
+    A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.  
+    **Example Output:** `t.me/dogeAI`
 
 21. **Website Link**  
-    A link to the official website for the token project.  
-    **Example Output:** `Link`
+    A link to the official website for the token project. Currently, this data is not available by web-scrape.  
+    **Example Output:** `https://dogeai.info/`
 
 ---
 
-## Using Helius RPC for Open Source Integration
+## Using Helius RPC for Integration
 
-Helius is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into our modules, we can:
+Helius is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping** and **enhance data accuracy.** 
 
-- **Replace Slow Web-Scraping:** Instead of relying solely on web-scraping methods, modules such as Token Info Analysis and Sniper Analysis can fetch real-time data directly from the blockchain.
-- **Enhance Data Accuracy:** Helius provides accurate and up-to-date blockchain metrics (e.g., token supply, market cap, holder counts).
-- **Quick Response Times:** The use of Helius RPC ensures fast responses, which is essential for real-time updates in the front-end extension.
-
-**How to Update the Current Code:**
-- **Modify the Stub Functions:** In files like `src/modules/tokenInfo.js` and `src/modules/sniperAnalysis.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
+**How to Update the Current Code**
+- **Modify the Stub Functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
 - **Leverage Configured Endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
-- **Improve Performance:** Integrate caching or batching of RPC calls if necessary to further improve response times for the front-end.
+- **Improve Performance:** Integrate batching of RPC calls if necessary to further improve response time.
+
+*Note:* If any data can not be retrieved from Helius, the developer can use whatever means necessary.
 
 ---
 
@@ -252,40 +250,41 @@ These future modules will be developed by community contributions and bounty rew
 
 ## Contributing
 
-We welcome contributions from the community! To contribute:
+Dragon encourages contributions from the community! To contribute:
 
-1. **Fork the Repository**
+1. **Fork the repository.**
 
-2. **Create a Feature Branch:**
+2. **Create a feature branch.**
 
    ```bash
    git checkout -b feature/new-module
    ```
 
-3. **Replace server.js, tokeninfo.js, apiutils.js, and telegramutils.js with your code snippets**
+3. **Replace** `server.js`, `tokenInfo.js`, `apiUtils.js`, **and** `telegramUtils.js` **with your stub functions.**
 
 
-4. **Commit Your Changes:**
+4. **Commit your changes.**
 
    ```bash
    git commit -am 'Add new module for XYZ'
    ```
 
-5. **Push the Branch:**
+5. **Push the branch.**
 
    ```bash
    git push origin feature/new-module
    ```
 
-6. **Open a Pull Request** describing your changes and the module you are adding.
+6. **Open a pull request describing your changes and the module you have contributed.**
 
 
 ---
+## Issues
+
+Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and available under [the MIT License](https://opensource.org/license/mit).
 
-Happy coding and bounty hunting!
-Build Mods, Collect Bounties.
-Contribute to Dragon and help reveal the hidden techniques in token projects on Solana.
+Happy coding. Get that money.
