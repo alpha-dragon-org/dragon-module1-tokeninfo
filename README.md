@@ -235,17 +235,7 @@ dragon-data-modules/
 
 ## Future Bounties
 
-Dragon’s aim is to make data analyses more transparent and community-driven. After the initial four modules, bounties will expand to developing modules for:
-
-- **Liquidity Analyses**
-- **Sentiment Analyses**
-- **Honey Pot Analyses**
-- **Volume Bot Analyses**
-- **Social Engagement Analyses**
-- **Copy Trader Analyses**
-- **Blue Chip Analyses**
-- **Fresh Wallet Analyses**
-- **more...**
+Dragon’s aim is to make data analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more analyses on holder distributions and deception tactics used on token supply.
 
 If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) and start working for that bounty!
 
