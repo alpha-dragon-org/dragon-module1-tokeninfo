@@ -28,7 +28,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
 
 ## Contribution Overview
 
-Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge, and this bounty, is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)), replacing these scrapes as much as possible. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Bounty Details](#bounty-details) below.
+Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge (and this bounty) is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)) to replace all scrapes. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Bounty Details](#bounty-details) below.
 
 By replacing web-scrapes with RPCs, Dragon will produce real-time data for traders and become an unbeatable companion in the trenches.
 
