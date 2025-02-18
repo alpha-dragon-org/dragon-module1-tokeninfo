@@ -84,14 +84,14 @@ dragon-data-modules/
 
 ## Setup & Installation
 
-1. **Clone the Repository:**
+1. **Clone the repository.**
 
    ```bash
    git clone https://github.com/alpha-dragon-dev/dragon-module1-tokeninfo.git
    cd dragon-module1-tokeninfo
    ```
 
-2. **Install Dependencies:**
+2. **Install dependencies.**
 
    Install all required Node.js packages by running:
 
@@ -99,7 +99,7 @@ dragon-data-modules/
    npm install
    ```
 
-3. **Configure the Application:**
+3. **Configure the application.**
 
    Open `src/config/config.js` and update the following parameters as needed:
 
@@ -107,7 +107,7 @@ dragon-data-modules/
    - `TELEGRAM_API_ID` and `TELEGRAM_API_HASH`: Replace with your Telegram API credentials.
    - `HELIUS_RPC_URL`: Update with your Helius RPC endpoint and API key. This endpoint is used for blockchain data queries.
 
-4. **Run the Servers:**
+4. **Run the servers.**
 
    Start the API server in one terminal:
 
@@ -120,7 +120,7 @@ dragon-data-modules/
    ```bash
    npm run telegram
    ```
-5. **To View Results on Frontend:**
+5. **View results on frontend.**
    Start the API server to fetch data from backend:
 
    ```bash
@@ -156,13 +156,13 @@ dragon-data-modules/
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long it has been since the token generation event. *Note:* In this iteration, the front-end is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display if the token is less than 1 hour old.  
+   How long it has been since the token generation event. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display if the token is less than 1 hour old.  
    **Example Output:** `23 hrs 4 mins` (23 h)  
    **Example Output:** `54 mins` (0 h)  
    **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo)
    
 6. **Holders**  
-   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the front-end only shows ">150" as the upper bound.  
+   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the frontend only shows ">150" as the upper bound.  
    **Example Output:** `9,088` (>150)  
    **Example Output:** `141` (141)
 
@@ -223,7 +223,7 @@ dragon-data-modules/
 
 ## Using Helius RPC for Integration
 
-Helius is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping** and **enhance data accuracy.** 
+[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping** and **enhance data accuracy.** 
 
 **How to Update the Current Code**
 - **Modify the Stub Functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
