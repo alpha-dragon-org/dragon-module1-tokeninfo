@@ -2,9 +2,11 @@
 
 Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
-- **Token Info/Security:** Basic token information such as ticker, age, market cap, and number of holders. Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
+**1. Token Info/Security:**
+- Basic token information such as ticker, age, market cap, and number of holders.
+- Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
   
-Soon, Dragon will provide data-modules analyzing many other kinds of power distributions for any project in crypto.
+Soon, Developers will contribute modules to Dragon based on what they think is important for traders to know about a token while trading in the trenches. 
 
 ---
 
@@ -15,7 +17,7 @@ Soon, Dragon will provide data-modules analyzing many other kinds of power distr
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
-  - [Current Modules \& Bounties](#current-modules--bounties)
+  - [Module Details](#module-details)
     - [Token Info Analysis](#token-info-analysis)
     - [Data Field Explanations](#data-field-explanations)
   - [Using Helius RPC for Open Source Integration](#using-helius-rpc-for-open-source-integration)
@@ -27,9 +29,9 @@ Soon, Dragon will provide data-modules analyzing many other kinds of power distr
 
 ## Contribution Overview
 
-Dragon is built with the vision to make data accessible and community-driven. Soon, developers will contribute new modules based on what they think is important to know in the trenches. First, we require an upgrade to the initial four modules that currently gather data by web-scraping online. The challenge then (and bounty) is to build an efficient data pipeline that integrates a module with a Solana RPC (ie. [Helius](https://www.helius.dev)).
+Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge, and this bounty, is to build a pipeline that connects the TokenInfo module with a Solana RPC (ie. [Helius](https://www.helius.dev)), replacing the scrapes as much as possible. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Module Details](#module-details) below.
 
-By replacing web-scrapes with RPC calls, Dragon will provide real-time data streaming and unbeatable companionship for traders in the trenches.
+By replacing web-scrapes with RPCs, Dragon will produce real-time data for traders and become an unbeatable companion in the trenches.
 
 ---
 
@@ -143,6 +145,7 @@ dragon-data-modules/
 - **Module Name:** Token Info  
 - **Bounty:** 0.20% of $DRAGON supply  
 - **Details:** Front end is built. Need an RPC pipeline via Helius node. Data to get includes: Ticker, Thumbnail image, Token age, Market cap, # of holders, and more.
+- **Goal:** Create a pipeline to an RPC that retrieves data in real-time and high accuracy.
 
 ---
 
@@ -187,11 +190,11 @@ dragon-data-modules/
    **Example Output:** `Locked`
 
 12. **DEX Screener Paid**  
-    Indicates if fees have been paid to DEX Screener to officially host the project's socials and materials.  
+    Indicates if fees have been paid to DEX Screener to officially host the project's social links and materials. Currently, this is not available by web-scrape.
     **Example Output:** `Dex`
 
 13. **Photon Link**  
-    A link to the token's chart on Photon.  
+    A link to the token's chart on Photon. Currently, this is not available by web-scrape.
     **Example Output:** `Link`
 
 14. **Pump.fun Link**  
@@ -211,7 +214,7 @@ dragon-data-modules/
     **Example Output:** `Link`
 
 18. **Telegram Link**  
-    A link to the official Telegram community for the token project.  
+    A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
     **Example Output:** `Link`
 
 19. **Website Link**  
