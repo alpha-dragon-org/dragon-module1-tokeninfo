@@ -230,7 +230,7 @@ dragon-data-modules/
 - **Leverage the configured endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
 - **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
 
-*Note:* If any data can not be retrieved from RPC, or if data can be faster achieved via another method such as data streams, the developer can use the alternative method with a brief explanation for their choice.
+*Note:* If any data can not be retrieved from RPC, or if data can be faster retrieved via another method such as data streams, the developer can implement the alternative method with a brief explanation for their choice.
 
 ---
 
