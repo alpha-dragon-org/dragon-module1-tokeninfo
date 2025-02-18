@@ -2,11 +2,11 @@
 
 Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
-**1. Token Info/Security:**
+**1. Token Info**
 - Basic token information such as ticker, age, market cap, and number of holders.
 - Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
   
-Soon, Developers will contribute modules to Dragon based on what they think is important for traders to know about a token while trading in the trenches. 
+Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
 
 ---
 
@@ -17,9 +17,9 @@ Soon, Developers will contribute modules to Dragon based on what they think is i
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
-  - [Module Details](#module-details)
+  - [Bounty Details](#bounty-details)
     - [Token Info Analysis](#token-info-analysis)
-    - [Data Field Explanations](#data-field-explanations)
+    - [Data to Fetch](#data-to-fetch)
   - [Using Helius RPC for Open Source Integration](#using-helius-rpc-for-open-source-integration)
   - [Future Bounties \& Modules](#future-bounties--modules)
   - [Contributing](#contributing)
@@ -29,7 +29,7 @@ Soon, Developers will contribute modules to Dragon based on what they think is i
 
 ## Contribution Overview
 
-Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge, and this bounty, is to build a pipeline that connects the TokenInfo module with a Solana RPC (ie. [Helius](https://www.helius.dev)), replacing the scrapes as much as possible. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Module Details](#module-details) below.
+Each of Dragon's first four modules currently gather data by web-scraping TrenchyBot, Trench Radar, and Bubblemaps. The challenge, and this bounty, is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)), replacing these scrapes as much as possible. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Bounty Details](#bounty-details) below.
 
 By replacing web-scrapes with RPCs, Dragon will produce real-time data for traders and become an unbeatable companion in the trenches.
 
@@ -138,86 +138,84 @@ dragon-data-modules/
 ---
 
 
-## Module Details
-
- The details for this module are outlined below:
+## Bounty Details
 
 - **Module Name:** Token Info  
-- **Bounty:** 0.20% of $DRAGON supply  
-- **Details:** Front end is built. Need an RPC pipeline via Helius node. Data to get includes: Ticker, Thumbnail image, Token age, Market cap, # of holders, and more.
-- **Goal:** Create a pipeline to an RPC that retrieves data in real-time and high accuracy.
+- **Bounty:** 0.15% of $DRAGON supply  
+- **Goal:** Create a pipeline to an RPC that retrieves all data below in real-time and with extremely high accuracy.
 
 ---
 
-### Data Field Explanations
+### Data To Fetch
 
 1. **Thumbnail**  
-   The image that was chosen to represent the token.
+   The image that was chosen to represent the token across exchanges.
+   **Example Output:** `$Prawn`
 
 2. **Ticker**  
-   The symbol that was chosen for the token.  
+   The alpha-nummeric string that was chosen to represent the token across exchanges.  
    **Example Output:** `$Prawn`
 
 3. **Age**  
-   How long the token has been in existence. At the moment, the front end is displayed in units from hours to years. In the back-end we are looking to increases precision to include minutes. At the moment, the front-end will only show 0 hours if the token is less than 1 hour old.
+   How long the token has been in existence. Note: At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.
    **Example Output:** `23 hrs 4 mins` (front-end: 23 h)
    **Example Output:** `23 mins` (front-end: 0 h)
    **Example Output:** `9 months 21 days 4 hours 15 mins` (front-end: 9 m)
    
-5. **Holders**  
+4. **Holders**  
    The number of distinct wallet addresses currently holding the token. At the moment, the front-end will only show ">150" but that will be updated after this bounty.
    **Example Output:** `9,088` (front-end: >150)
    **Example Output:** `141` (front-end: 141)
 
-7. **CTO or Dev**  
+5. **CTO or Dev**  
    Indicates if the token is a "community take over" as defined by CTO pur on DEX Screener or is still developer-led.  
    **Example Output:** `Dev`
 
-8. **Market Cap**  
+6. **Market Cap**  
    The total value (in USD) of the token supply in circulation.  
    **Example Output:** `$584,887`
 
-9. **Mint Authority**  
+7. **Mint Authority**  
    Specifies whether the authority to mint (create) additional tokens has been revoked.  
    **Example Output:** `Mint`
 
-10. **Freeze Authority**  
+8. **Freeze Authority**  
    Specifies whether the authority to freeze or lock token transfers has been revoked.  
    **Example Output:** `Freeze`
 
-11. **Liquidity Locked**  
+9. **Liquidity Locked**  
    Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
    **Example Output:** `Locked`
 
-12. **DEX Screener Paid**  
+10. **DEX Screener Paid**  
     Indicates if fees have been paid to DEX Screener to officially host the project's social links and materials. Currently, this is not available by web-scrape.
     **Example Output:** `Dex`
 
-13. **Photon Link**  
+11. **Photon Link**  
     A link to the token's chart on Photon. Currently, this is not available by web-scrape.
     **Example Output:** `Link`
 
-14. **Pump.fun Link**  
+12. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
     **Example Output:** `Link`
 
-15. **Solscan Link**  
+13. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
     **Example Output:** `Link`
 
-16. **DEX Screener Link**  
+14. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
     **Example Output:** `Link`
 
-17. **Twitter Link**  
+15. **Twitter Link**  
     A link to the official Twitter account for the token project.  
     **Example Output:** `Link`
 
-18. **Telegram Link**  
+16. **Telegram Link**  
     A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.
     **Example Output:** `Link`
 
-19. **Website Link**  
+17. **Website Link**  
     A link to the official website for the token project.  
     **Example Output:** `Link`
 
