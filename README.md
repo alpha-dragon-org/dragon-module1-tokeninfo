@@ -3,7 +3,7 @@
 Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
 **1. Token Info**
-- Basic token information such as ticker, age, market cap, and number of holders.
+- Basic token information such as ticker, age, market cap, number of holders, and more.
 - Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
   
 Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
