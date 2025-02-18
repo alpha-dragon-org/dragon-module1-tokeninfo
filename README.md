@@ -154,10 +154,10 @@ dragon-data-modules/
 
 3. **Ticker**  
    The alpha-nummeric string that was chosen to represent the token across exchanges.  
-   **Example Output:** `$Prawn`
+   **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long the token has been in existence. Note: At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.
+   How long the token has been in existence. **Note:** At the moment, the front end is displayed in units that range from hours to years. In the back-end we want to increase precision to include minutes as well. In this iteration, the front-end will show 0 hours if the token is less than 1 hour old.
    **Example Output:** `23 hrs 4 mins` (front-end: 23 h)
    **Example Output:** `23 mins` (front-end: 0 h)
    **Example Output:** `9 months 21 days 4 hours 15 mins` (front-end: 9 m)
