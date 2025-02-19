@@ -220,6 +220,10 @@ dragon-data-modules/
     A link to the official website for the token project. Currently, this data is not available by web-scrape.  
     **Metadata Example:** `https://dogeai.info/`
 
+### Module Output
+
+We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved as well.
+
 ---
 
 ## Bounty Selection Criteria
