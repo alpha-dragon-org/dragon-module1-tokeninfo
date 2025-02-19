@@ -234,8 +234,6 @@ We will select a recipient for this bounty based on the following criteria, in o
 3. The fastest speed for data retrieval
 4. If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
 
-At the discretion of the Dragon executive team, if the bounty is completed by combining the codes of multiple submissions AND there are no single submissions that meet all criteria, we may elect to split the bounty between the developers involved.
-
 ---
 
 ## Using Helius RPC for Integration
