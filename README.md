@@ -1,13 +1,12 @@
 # Intro to Dragon Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
+Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
+
+The Alpha-Dragon includes four data-modules, and the module of focus for this bounty is:
 
 **1. Token Info**
-- Basic token information such as ticker, age, market cap, number of holders, and more.
-- Basic security metrics such as mint authority revoked, freeze authority revoked, and locked liquidity pool.
+- This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It will also display basic security metrics such as mint authority revoked, freeze authority revoked, and a locked liquidity pool. See all details about the data to fetch for this module [below](#module-details).
   
-Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
-
 ---
 
 ## Table of Contents
@@ -19,7 +18,7 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Setup \& Installation](#setup--installation)
   - [Module Details](#module-details)
   - [Bounty Selection Criteria](#bounty-selection-criteria)
-  - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
+  - [Integrating RPCs For Data Retrieval](#integrating-rpcs-for-data-retrieval)
   - [Contributing](#contributing)
   - [Future Bounties](#future-bounties)
   - [Issues](#issues)
@@ -29,9 +28,9 @@ Soon, developers will contribute their own modules to Dragon based on what they 
 
 ## Contribution Overview
 
-Each of Dragon's first four modules currently gathers data by web-scraping TrenchyBot, TrenchRadar, and Bubblemaps. The task is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects this module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
-By fetching real-time data directly from a node, Dragon will become an unbeatable companion in the trenches.
+If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
 
 ---
 
@@ -157,7 +156,7 @@ dragon-data-modules/
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long it has been since the token generation event. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display for now if the token is less than 1 hour old.  
+   How long it has been since the creation of its first liquidity pool. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display for now if the token is less than 1 hour old.  
    **Example Output:** `23 hrs 4 mins` (23 h)  
    **Example Output:** `54 mins` (0 h)  
    **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo)
@@ -168,7 +167,7 @@ dragon-data-modules/
    **Example Output:** `141` (141)
 
 7. **CTO or Dev**  
-   Indicates if the token project has undergone a "community take over" as defined by purchasing the package on DEX Screener OR if it is still a developer-led project.  
+   Indicates if the token project has undergone a "community take over" as defined by purchasing the package on DEX Screener OR if it is still a developer-led project. Link to the develper wallet on solscan if so.  
    **Example Output:** `Dev`  
    **Metadata Example:** `https://solscan.io/account/J5DTWzM9ArZPjfymj4Y8CsRqM82ywLM34Q6nS6vjauez`  
 
@@ -185,62 +184,64 @@ dragon-data-modules/
    **Example Output:** `True` (✅)
     
 13. **Liquidity Locked**  
-   Shows whether the liquidity pool has been locked, usually by burning the LP tokens.  
+   Shows whether the liquidity pool has been locked, by burning the LP tokens.  
    **Example Output:** `True` (✅)
 
 14. **DEX Screener Paid**  
-    Indicates if fees have been paid to DEX Screener to host the project's social links and images/materials. Currently, this data is not available by web-scrape.  
+    Indicates if fees have been paid to DEX Screener to host the project's social links and image materials.  
     **Example Output:** `False` (❌)
 
 15. **Photon Link**  
-    A link to the token's chart on Photon. Currently, this data is not available by web-scrape.  
-    **Metadata Example:** `https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb`
+    A link to the token's chart on Photon.  
+    **Example Output:** `https://photon-sol.tinyastro.io/en/lp/3d7PRDYq3CvRxFBoXrYeKr3DYYco2AnYupv9D9bAUoyH?handle=781371610492724a5aacb`
 
 16. **Pump.fun Link**  
     A link to the token's page on Pump.fun (if applicable).  
-    **Metadata Example:** `https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap`
+    **Example Output:** `https://pump.fun/coin/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump?coins_sort=market_cap`
 
 17. **Solscan Link**  
     A link to the token’s contract on the Solscan block explorer.  
-    **Metadata Example:** `https://solscan.io/token/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump`
+    **Example Output:** `https://solscan.io/token/9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump`
 
 18. **DEX Screener Link**  
     A link to the token's chart on DEX Screener.  
-    **Metadata Example:** `https://dexscreener.com/solana/3d7prdyq3cvrxfboxryekr3dyyco2anyupv9d9bauoyh`
+    **Example Output:** `https://dexscreener.com/solana/3d7prdyq3cvrxfboxryekr3dyyco2anyupv9d9bauoyh`
 
 19. **X Link**  
     A link to the official X account for the token project.  
-    **Metadata Example:** `https://x.com/dogeai_gov`
+    **Example Output:** `https://x.com/dogeai_gov`
 
 20. **Telegram Link**  
-    A link to the official Telegram community for the token project. Currently, this is not functioning correctly by web-scrape.  
-    **Metadata Example:** `t.me/dogeAI`
+    A link to the official Telegram community for the token project.  
+    **Example Output:** `t.me/dogeAI`
 
 21. **Website Link**  
-    A link to the official website for the token project. Currently, this data is not available by web-scrape.  
-    **Metadata Example:** `https://dogeai.info/`
+    A link to the official website for the token project.  
+    **Example Output:** `https://dogeai.info/`
 
 ### Module Output
 
-We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved as well.
+We have included a testing environment where you can see your code displayed live in the module. The test module will be interactive, meaning you can hover to reveal the metadata per button.
 
 ---
 
 ## Bounty Selection Criteria
 
 We will select a recipient for this bounty based on the following criteria, in order of evaluation:
+
 1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
-2. The highest accuracy for data retrieved in real-time
-3. The fastest speed for data retrieval
-4. If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
+2. The highest accuracy for data retrieved
+3. The fastest speed for retrieval, updated within seconds to real-time
+   
+If there is more than one developer to meet the above criteria, the first pull request will receive the bounty.
 
 ---
 
-## Using Helius RPC for Integration
+## Integrating RPCs for Data Retrieval
 
-[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
+[Helius](https://www.helius.dev) is an example of an RPC service that enables quick and direct access to on-chain data on Solana. By integrating RPCs into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
 
-**How to update the code**
+**How to update the code (with Helius)**
 - **Modify the stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
 - **Leverage the configured endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
 - **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
@@ -280,9 +281,9 @@ We will select a recipient for this bounty based on the following criteria, in o
 
 ## Future Bounties
 
-Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
+Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
 
-If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 ## Issues
