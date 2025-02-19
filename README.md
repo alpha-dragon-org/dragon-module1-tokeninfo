@@ -120,7 +120,7 @@ dragon-data-modules/
    ```bash
    npm run telegram
    ```
-5. **View results on frontend.**
+5. **View results in testing environment.**
 
    Start the API server to fetch data from backend:
 
