@@ -156,15 +156,15 @@ dragon-data-modules/
    **Example Output:** `$DOGEAI`
 
 4. **Age**  
-   How long it has been since the creation of its first liquidity pool. *Note:* In this iteration, the frontend is displayed in units that range only from hours to years. We want to increase precision to include minutes as well. 0 hours will be the display for now if the token is less than 1 hour old.  
-   **Example Output:** `23 hrs 4 mins` (23 h)  
-   **Example Output:** `54 mins` (0 h)  
-   **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo)
+   How long it has been since the creation of its first liquidity pool, using a range from minutes to months. 
+   **Example Output:** `23 hrs 4 mins` (23 h displayed in frontend)  
+   **Example Output:** `54 mins` (0 h displayed)  
+   **Example Output:** `9 months 21 days 4 hours 15 mins` (9 mo displayed)
    
 6. **Holders**  
-   The number of distinct wallet addresses currently holding the token. *Note:* In this iteration, the frontend only goes to ">150" as the upper bound.  
-   **Example Output:** `9,088` (>150)  
-   **Example Output:** `141` (141)
+   The number of distinct wallet addresses currently holding the token.
+   **Example Output:** `9,088` (>150 displayed)  
+   **Example Output:** `141` (141 displayed)
 
 7. **CTO or Dev**  
    Indicates if the token project has undergone a "community take over" as defined by purchasing the package on DEX Screener OR if it is still a developer-led project. Link to the develper wallet on solscan if so.  
