@@ -236,7 +236,7 @@ We will select a recipient for this bounty based on the following criteria, in o
    
 If there is more than one developer to satisfy the above criteria, the first pull request will receive the bounty. 
 
-**Please make sure to include your wallet address in your documentation and apply to this job hosted on [based.jobs](https://www.based.jobs/) using that same wallet. This is where we will award the bounty to the winning developer.**
+**Please make sure to include your wallet address in your documentation and apply to [this job](https://www.based.jobs/) on based.jobs using that same wallet. This is where we will award the bounty to the winning developer.**
 
 ---
 
