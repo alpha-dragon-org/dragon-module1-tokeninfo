@@ -230,10 +230,13 @@ We have included a testing environment where you can see your code displayed liv
 We will select a recipient for this bounty based on the following criteria, in order of evaluation:
 
 1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
-2. The highest accuracy for data retrieved
-3. The fastest speed for retrieval, updated within seconds to real-time
+2. Closest to 100% accuracy for all data retrieved
+3. Closest to immediate for data retrieval, updated in real-time
+4. Most comprehensive documentation of the work in accompanying readme file
    
-If there is more than one developer to meet the above criteria, the first pull request will receive the bounty.
+If there is more than one developer to satisfy the above criteria, the first pull request will receive the bounty. 
+
+**Please make sure to include your wallet address in your documentation and apply to this job hosted on [based.jobs](https://www.based.jobs/) using that same wallet. This is where we will award the bounty to the winning developer.**
 
 ---
 
@@ -297,10 +300,10 @@ This project is open source and available under [the MIT License](https://openso
 
 ---
 <img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/public/images/logo.gif?raw=true" width="200">
-Want to meet the project co-founders?
 
-
+[Discussion](https://github.com/alpha-dragon-org/dragon-community-openIdeas/discussions) |
+[Telegram](https://t.me/+OU0SLVfcpEZhZWQx) |
+[X](https://x.com/AlphaDragonAI)
 
 https://github.com/user-attachments/assets/7cd467df-3751-4be8-a710-2b8466ecf084
-
 
