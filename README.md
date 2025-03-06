@@ -1,8 +1,8 @@
-# Intro to Dragon Data-Modules
+# Intro to Dragon's Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
+Dragon is a browser extension that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into "data-modules" that provide different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches. 
 
-The Alpha-Dragon includes four data-modules, and the module of focus for this bounty is:
+The initial release includes four data-modules, and the module of focus for this bounty is:
 
 **1. Token Info**
 - This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It will also display basic security metrics such as mint authority revoked, freeze authority revoked, and a locked liquidity pool. See all details about the data to fetch for this module [below](#module-details).
@@ -11,7 +11,7 @@ The Alpha-Dragon includes four data-modules, and the module of focus for this bo
 
 ## Table of Contents
 
-- [Intro to Dragon Data-Modules](#intro-to-dragon-data-modules)
+- [Intro to Dragon's Data-Modules](#intro-to-dragons-data-modules)
 - [Table of Contents](#table-of-contents)
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
@@ -46,12 +46,12 @@ dragon-data-modules/
 │   ├── api
 │   │   └── server.js        # Express API server for data storage and retrieval which connects to the endpoints
 │   ├── config
-│   │   └── config.js        # Configuration file (ports, API keys, Helius RPC endpoint)
+│   │   └── config.js        # Configuration file (ports, API keys, RPC endpoint)
 │   ├── modules
 │   │   ├── bundleAnalysis.js   # Module for Bundle Analysis
 │   │   ├── clusterAnalysis.js  # Module for Cluster Analysis
-│   │   ├── tokenInfo.js        # Module for Token Info (Helius RPC integration) 
-│   │   └── sniperAnalysis.js   # Module for Sniper Analysis (Helius RPC)
+│   │   ├── tokenInfo.js        # Module for Token Info 
+│   │   └── sniperAnalysis.js   # Module for Sniper Analysis
 │   ├── telegram
 │   │   └── telegramClient.js   # Telegram API integration & message processing which is used for tokenInfo.js and sniperAnalysis.js 
 │   └── utils
@@ -104,7 +104,7 @@ dragon-data-modules/
 
    - `API_SERVER_PORT` and `TELEGRAM_SERVER_PORT`: Set the ports for the API and Telegram servers.
    - `TELEGRAM_API_ID` and `TELEGRAM_API_HASH`: Replace with your Telegram API credentials.
-   - `HELIUS_RPC_URL`: Update with your Helius RPC endpoint and API key. This endpoint is used for blockchain data queries.
+   - `HELIUS_RPC_URL`: Update with your Helius RPC endpoint and API key, or replace with another RPC service's of your choice. This endpoint is used for blockchain data queries.
 
 4. **Run the servers.**
 
@@ -286,7 +286,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
 
-If you have an idea for a data-module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions) to be considered for a bounty.
 
 ---
 ## Issues
@@ -302,10 +302,9 @@ This project is open source and available under [the MIT License](https://openso
 <img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/logo-d.gif?raw=true" width="150">
 
 
-
-[Discussion](https://github.com/alpha-dragon-org/dragon-community-openIdeas/discussions) |
-[Telegram](https://t.me/+OU0SLVfcpEZhZWQx) |
-[X](https://x.com/AlphaDragonAI)
+[X](https://x.com/AlphaDragonAI) |
+[Discussion](https://github.com/orgs/alpha-dragon-org/discussions) |
+[Telegram](https://t.me/+OU0SLVfcpEZhZWQx)
 
 <video src="https://github.com/user-attachments/assets/7cd467df-3751-4be8-a710-2b8466ecf084" controls>
   Your browser does not support the video tag.
