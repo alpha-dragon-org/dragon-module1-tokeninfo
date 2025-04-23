@@ -1,11 +1,11 @@
 # Intro to Dragon's Data-Modules
 
-Dragon is a browser extension that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into "data-modules" that provide different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches. 
+Dragon is a browser extension that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into modules that provide different analyses on a token. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches. 
 
-The initial release includes four data-modules, and the one for this bounty is:
+The initial release includes four modules, and the module for this bounty is:
 
 **1. Token Info**
-- This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It will also display basic security metrics such as mint authority revoked, freeze authority revoked, and a locked liquidity pool. See all details about the data to fetch for this module [below](#module-details).
+- This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It also displays fundamental security measures such as if the mint authority is revoked, freeze authority revoked, and a is the liquidity pool locked. See all details about the data to fetch for this module [below](#module-details).
   
 ---
 
@@ -28,9 +28,9 @@ The initial release includes four data-modules, and the one for this bounty is:
 
 ## Contribution Overview
 
-This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects this module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects this module to a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
-If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
+If the data retrieved is as close to real-time as possible, Dragon becomes an unbeatable companion in the trenches.
 
 ---
 
@@ -231,7 +231,7 @@ We will select a recipient for this bounty based on the following criteria, in o
 
 1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
 2. Closest to 100% accuracy for all data retrieved
-3. Closest to immediate for data retrieval, updated in real-time
+3. Closest to immediate for data retrieval, and updated in real-time
 4. Most comprehensive documentation of the work in accompanying readme file
    
 If there is more than one developer to satisfy the above criteria, the first pull request will receive the bounty. 
@@ -242,7 +242,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Integrating RPCs for Data Retrieval
 
-[Helius](https://www.helius.dev) is an example of an RPC service that enables quick and direct access to on-chain data on Solana. By integrating RPCs into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
+[Helius](https://www.helius.dev) is an example of an RPC service that enables quick and direct access to on-chain data on Solana. By integrating RPCs into Dragon's modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
 
 **How to update the code (with Helius)**
 - **Modify the stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
@@ -291,7 +291,7 @@ If you have an idea for a module that could benefit traders in the trenches, ple
 ---
 ## Issues
 
-Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
+Please report any bugs with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
 
 ---
 ## License
