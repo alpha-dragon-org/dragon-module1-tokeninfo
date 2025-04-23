@@ -28,7 +28,7 @@ The initial release includes four modules and the module for this bounty is:
 
 ## Contribution Overview
 
-This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects this module to a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects it to a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
 If the data retrieved is as close to real-time as possible, Dragon becomes an unbeatable companion in the trenches.
 
