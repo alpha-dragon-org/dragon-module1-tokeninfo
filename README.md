@@ -5,7 +5,7 @@ Dragon is a companion that visualizes the concentrations in power for any token 
 The initial release includes four modules and the module for this bounty is:
 
 **1. Token Info**
-- This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It also displays fundamental security measures such as if the mint authority is revoked, freeze authority revoked, and a is the liquidity pool locked. See all details about the data to fetch for this module [below](#module-details).
+- This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It also displays fundamental security measures such as if the mint authority is revoked, freeze authority revoked, and if the liquidity pool is locked. See all details about the data to fetch for this module [below](#module-details).
   
 ---
 
