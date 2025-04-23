@@ -284,7 +284,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Future Bounties
 
-Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
+Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include all kinds of fundamental token analyses.
 
 If you have an idea for a module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions) to be considered for a bounty.
 
