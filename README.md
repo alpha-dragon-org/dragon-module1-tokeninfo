@@ -1,4 +1,4 @@
-# Intro to Dragon's Data-Modules
+# Intro to Dragon's Modules
 
 Dragon is a companion that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into modules that provide different analyses on a token. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches. 
 
@@ -11,7 +11,7 @@ The initial release includes four modules and the module for this bounty is:
 
 ## Table of Contents
 
-- [Intro to Dragon's Data-Modules](#intro-to-dragons-data-modules)
+- [Intro to Dragon's Modules](#intro-to-dragons-modules)
 - [Table of Contents](#table-of-contents)
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
