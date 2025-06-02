@@ -2,7 +2,7 @@
 
 Dragon’s key design feature is its modular architecture. Each token analysis is packaged as a bite-sized data module that evaluates one specific dimension of a token project such as liquidity flow, smart money inflow, team wallet behavior, or developer history. Dragon launches with four prototype modules, but the goal is an open ecosystem of community-contributed modules where anyone can propose and submit a new module sourcing on- or off-chain data.
 
-This specific bounty is to develop on the prototype module for:
+This bounty is to develop the prototype module for:
 
 **1. Token Info**
 - This module displays a basic overview on token information like ticker, age, market cap, and number of holders. It also displays fundamental security measures such as if the mint authority is revoked, freeze authority revoked, and if the liquidity pool is locked. See all details about the data to fetch for this module [below](#module-details).
