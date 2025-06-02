@@ -32,7 +32,7 @@ This bounty is to develop the prototype module for:
 
 This module currently gathers data by web-scraping TrenchyBot and a few other sources. The task is to build a pipeline that connects it to a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
-If the data retrieved is as close to real-time as possible, Dragon becomes an unbeatable companion in the trenches.
+If the data retrieved is as close to real-time as possible, Dragon becomes an unbeatable DYOR companion in the trenches.
 
 ---
 
@@ -286,7 +286,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Future Bounties
 
-Dragon’s vision is for everyday traders to discover alpha as data sourced by open intelligence. If you have an idea for a token analysis that can contribute, please consider proposing it to the community in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions).
+Dragon’s vision is for everyday traders to discover alpha as data sourced by open intelligence. If you have an idea for a token analysis to contribute, please consider proposing it to the community in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions).
 
 If it receives significant support, we'll create a bounty to develop it!
 
