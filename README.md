@@ -1,4 +1,4 @@
-# Intro to Dragon's Modules
+# Intro to Data Modules
 
 Dragon’s key design feature is its modular architecture. Each token analysis is packaged as a bite-sized data module that evaluates one specific dimension of a token project such as liquidity flow, smart money inflow, team wallet behavior, or developer history. Dragon launches with four prototype modules, but the goal is an open ecosystem of community-contributed modules where anyone can propose and submit a new module sourcing on- or off-chain data.
 
@@ -11,7 +11,7 @@ This specific bounty is to develop on the prototype module for:
 
 ## Table of Contents
 
-- [Intro to Dragon's Modules](#intro-to-dragons-modules)
+- [Intro to Data Modules](#intro-to-data-modules)
 - [Table of Contents](#table-of-contents)
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
