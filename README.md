@@ -236,7 +236,7 @@ We will select a recipient for this bounty based on the following criteria, in o
    
 If there is more than one developer to satisfy the above criteria, the first pull request will receive the bounty. 
 
-**Please make sure to include your wallet address in your documentation and apply to [this job](https://www.based.jobs/) on based.jobs using that same wallet. This is where we will award the bounty to the winning developer.**
+**Please make sure to include your Solana wallet address when you submit your documentation. This is the address where we will send the token bounty if your submission is selected.**
 
 ---
 
@@ -284,9 +284,9 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Future Bounties
 
-Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include all kinds of fundamental token analyses.
+Dragon’s vision is for everyday traders to discover alpha as data sourced by open intelligence. If you have an idea for a token analysis that can contribute, please consider proposing it to the community in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions).
 
-If you have an idea for a module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions) to be considered for a bounty.
+If it receives significant support, we'll create a bounty to develop it!
 
 ---
 ## Issues
@@ -305,8 +305,4 @@ This project is open source and available under [the MIT License](https://openso
 [Website](https://alpha-dragon.ai/) |
 [Telegram](https://t.me/+OU0SLVfcpEZhZWQx) |
 [X](https://x.com/AlphaDragonAI) |
-[Discussion](https://github.com/orgs/alpha-dragon-org/discussions) |
-
-
-
-
+[Discussion](https://github.com/orgs/alpha-dragon-org/discussions)
