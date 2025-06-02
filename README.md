@@ -293,7 +293,7 @@ If it receives significant support, we'll create a bounty to develop it!
 ---
 ## Issues
 
-Please report any bugs with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
+Please report any bugs with this module through the issues tab [here](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/issues).
 
 ---
 ## License
