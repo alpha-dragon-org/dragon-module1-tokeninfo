@@ -299,16 +299,14 @@ Please report any bugs with this module through the issues tab here: [github.com
 This project is open source and available under [the MIT License](https://opensource.org/license/mit).
 
 ---
-<img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/logo-d.gif?raw=true" width="150">
+![Untitled5000x5000px1-ezgif com-optimize](https://github.com/user-attachments/assets/796967cf-d097-4bb0-962e-2648c9c4dbd1)
 
 
+[Website](https://alpha-dragon.ai/) |
+[Telegram](https://t.me/+OU0SLVfcpEZhZWQx) |
 [X](https://x.com/AlphaDragonAI) |
 [Discussion](https://github.com/orgs/alpha-dragon-org/discussions) |
-[Telegram](https://t.me/+OU0SLVfcpEZhZWQx)
 
-<video src="https://github.com/user-attachments/assets/7cd467df-3751-4be8-a710-2b8466ecf084" controls>
-  Your browser does not support the video tag.
-</video>
 
 
 
