@@ -286,7 +286,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Future Bounties
 
-Dragon’s vision is for everyday traders to discover alpha as data sourced by open intelligence. If you have an idea for a token analysis to contribute, please consider proposing it to the community in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions).
+Dragon’s vision is for everyday traders to discover alpha as data sourced by open intelligence. If you have an idea for a token analysis to contribute, please consider proposing it to the community in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions/categories/module-ideas).
 
 If it receives significant support, we'll create a bounty to develop it!
 
